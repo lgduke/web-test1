@@ -12,9 +12,6 @@
 
   gtag('config', 'UA-168921013-1');
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="colors.js"></script>
-
 
 </head>
 
@@ -23,9 +20,29 @@
 
   <h1><a href="index.html"> WEB</a> </h1>
 
-   <input id="night_day" type="button" value="night" onclick="
-     nightDayHandler(this)
-    ">
+
+   <input type="button" value="night" onclick="
+   var target = document.querySelector('body')
+   if(this.value ==='night'){
+    target.style.backgroundColor ='black';
+    target.style.color ='white';
+    this.value ='day';
+  } else {
+    target.style.backgroundColor ='white';
+    target.style.color ='black';
+    this.value ='night';
+   } ">
+
+   <input type="button" value="night" onclick="
+   if(this.value ==='night'){
+    document.querySelector('body').style.backgroundColor ='black';
+    document.querySelector('body').style.color ='white';
+    this.value ='day';
+  } else {
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color ='black';
+    this.value ='night';
+   } ">
 
 <ol>
   <li><a href="1.html"> html </a></li>
@@ -70,6 +87,21 @@
   gyroscope; picture-in-picture"
   allowfullscreen></iframe>
 </p>
+
+<input type="button" value="night2" onclick="
+if(this.value ==='night2'){
+ document.querySelector('body').style.backgroundColor ='black';
+ document.querySelector('body').style.color ='white';
+ this.value ='day2';
+} else {
+ document.querySelector('body').style.backgroundColor ='white';
+ document.querySelector('body').style.color ='black';
+ this.value ='night2';
+
+} ">
+
+
+
 
 <p>
   <div id="disqus_thread"></div>
